@@ -34,6 +34,9 @@ namespace serveris
             services.AddDbContext<serverisContext>(opt => opt.UseInMemoryDatabase("TodoList"));
             services.AddDbContext<UserContext>(opt => opt.UseInMemoryDatabase("Users"));
             services.AddDbContext<LuckyNumberContext>(opt => opt.UseInMemoryDatabase("LuckyNumbers"));
+            services.AddDbContext<BetItemContext>(opt => opt.UseInMemoryDatabase("Bet"));
+            services.AddDbContext<GameItemContext>(opt => opt.UseInMemoryDatabase("Game"));
+            services.AddDbContext<NewsItemContext>(opt => opt.UseInMemoryDatabase("News"));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             // configure strongly typed settings objects

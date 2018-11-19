@@ -1,4 +1,4 @@
-﻿const uri = "api/serveris";
+﻿/*const uri = "api/serveris";
 let todos = null;
 function getCount(data) {
     const el = $("#counter");

@@ -9,6 +9,7 @@ using serveris.Services;
 
 namespace serveris.Controllers
 {
+    [Authorize]
     [Route("api/luckynumber")]
     [ApiController]
     public class LuckyNumberController : ControllerBase
