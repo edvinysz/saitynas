@@ -77,7 +77,7 @@
 
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">My Betting site</a>
+            <a class="navbar-brand" onclick="changeIframe('../page/news.html')">My Betting site</a>
             <a class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -85,36 +85,43 @@
             </a>
         </div>
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Games</a></li>
-                <li><a href="#">My Bets</a></li>
-                <li><a href="#">Lucky Number</a></li>
-                <li><a href="#" style="padding-top:15px;border-top:5px solid black;">My Account</a></li>
+            <ul class="nav navbar-nav" id="switcheris">
+                <li class="active"><a onclick="changeIframe('../page/news.html')">Home</a></li>
+                <li><a onclick="changeIframe('../page/news.html')">News</a></li>
+                <li><a onclick="changeIframe('../page/games.html')">Games</a></li>
+                <li><a onclick="changeIframe('../page/bets.html')">My Bets</a></li>
+                <li><a onclick="changeIframe('../page/lucky.html')">Lucky Number</a></li>
+                <li><a onclick="changeIframe('../page/account.html')">My Account</a></li>
             </ul>
         </div>
     </div>
 
     <div class="container"></div>
 
-    <a href="#" data-toggle="modal" data-target="#login-modal" style="display:block;padding-top:70px;">Login</a>
+    <iframe scrolling="no" class="iframe-page-target" id="iframe-page-target" src="" frameBorder="0" display="block"></iframe>
+
+    <a id="login-link-js" href="#" data-toggle="modal" data-target="#login-modal" style="display:none;padding-top:70px;">Login</a>
     <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
         <div class="modal-dialog" style="width:400px;">
             <div class="loginmodal-container">
                 <h1>Login to Your Account</h1><br>
                 <form>
-                    <input type="text" name="user" placeholder="Username">
-                    <input type="password" name="pass" placeholder="Password">
-                    <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+                    <input type="text" name="user" id="username-placeholder" placeholder="Username">
+                    <input type="password" name="pass" id="password-placeholder" placeholder="Password">
+                    <input type="submit" name="login" onclick="authorize()" class="login loginmodal-submit" value="Login">
                 </form>
-
+                <!--
                 <div class="login-help">
                     <a href="#">Register</a> - <a href="#">Forgot Password</a>
                 </div>
+                    -->
             </div>
         </div>
     </div>
+
+    <footer>
+        <p>This page was created by Edvinas Kavaliauskas @2018</p>
+    </footer>
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

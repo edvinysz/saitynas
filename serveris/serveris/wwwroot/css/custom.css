@@ -42,4 +42,29 @@
     .collapsing {
         overflow: hidden !important;
     }
+
+    .navbar-collapse .navbar-nav li:last-child {
+        padding-top: 15px;
+        border-top: 5px solid black;
+    }
+}
+
+html, body {
+    height: 100%;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: antiquewhite;
+    color: black;
+    text-align: center;
+    font-size: 15px;
+}
+
+.iframe-page-target {
+    margin-top: 50px;
+    width: 100%;
 }
