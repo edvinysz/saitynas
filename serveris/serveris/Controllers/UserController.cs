@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using serveris.Models;
 
+//Speju sitas nenaudojamas -> UserItem
 namespace serveris.Controllers
 {
     [Route("api/user")]

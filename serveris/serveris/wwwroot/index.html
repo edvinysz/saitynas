@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
+<!--<head>
     <meta charset="UTF-8">
     <title>serveris CRUD</title>
     <style>
@@ -64,5 +64,61 @@
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
     <script src="site.js"></script>
+</body>-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>BETWIN</title>
+    <link href="css3/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="background-color:black;">
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">My Betting site</a>
+            <a class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Games</a></li>
+                <li><a href="#">My Bets</a></li>
+                <li><a href="#">Lucky Number</a></li>
+                <li><a href="#" style="padding-top:15px;border-top:5px solid black;">My Account</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container"></div>
+
+    <a href="#" data-toggle="modal" data-target="#login-modal" style="display:block;padding-top:70px;">Login</a>
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog" style="width:400px;">
+            <div class="loginmodal-container">
+                <h1>Login to Your Account</h1><br>
+                <form>
+                    <input type="text" name="user" placeholder="Username">
+                    <input type="password" name="pass" placeholder="Password">
+                    <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+                </form>
+
+                <div class="login-help">
+                    <a href="#">Register</a> - <a href="#">Forgot Password</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
 </body>
+
 </html>
