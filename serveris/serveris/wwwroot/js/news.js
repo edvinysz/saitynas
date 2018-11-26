@@ -34,45 +34,6 @@ function getData() {
             });
             html = html + '</ul>';
             document.getElementById('grid-div').innerHTML = html;
-            /*
-            const tBody = $("#todos");
-
-            $(tBody).empty();
-
-            getCount(data.length);
-
-            $.each(data, function (key, item) {
-                const tr = $("<tr></tr>")
-                    .append(
-                        $("<td></td>").append(
-                            $("<input/>", {
-                                type: "checkbox",
-                            disabled: true,
-                            checked: item.data
-                            })
-                        )
-                    )
-                    .append($("<td></td>").text(item.text))
-                    .append(
-                        $("<td></td>").append(
-                            $("<button>Edit</button>").on("click", function () {
-                                editItem(item.id);
-                            })
-                        )
-                    )
-                    .append(
-                        $("<td></td>").append(
-                            $("<button>Delete</button>").on("click", function () {
-                                deleteItem(item.id);
-                            })
-                        )
-                    );
-
-                tr.appendTo(tBody);
-            });
-
-            todos = data;
-            */
         }
     });
 }

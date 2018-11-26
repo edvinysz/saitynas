@@ -1,0 +1,32 @@
+﻿body {
+    font-family: 'Mukta', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.inner {
+    text-align: center;
+}
+
+.col-md-9 {
+    max-width: 1080px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#account-balance-main {
+    text-align: right;
+    margin-top: -210px;
+}
+#games-won-main, #games-lost-main {
+    text-align: right;
+}
+
+#submit-button-main {
+    text-align: center;
+    padding-top: 0px;
+}
+
+    #submit-button-main .btn-primary {
+        background-image: url("https://www.freepngimg.com/thumb/submit_button/25395-2-submit-button-thumb.png");
+    }

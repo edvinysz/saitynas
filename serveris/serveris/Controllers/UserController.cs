@@ -4,10 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using serveris.Models;
+using Microsoft.AspNetCore.Authorization;
+using serveris.Services;
 
 //Speju sitas nenaudojamas -> UserItem
 namespace serveris.Controllers
 {
+    //[Authorize]
     [Route("api/user")]
     [ApiController]
     public class UserController : ControllerBase
@@ -21,7 +24,7 @@ namespace serveris.Controllers
             if (_context.UserItems.Count() == 0)
             {
                 //sukuriam nauja userItem jei empty, reiskia negalim istrint visu userItems
-                _context.UserItems.Add(new UserItem { Name = "Itemas" });
+                _context.UserItems.Add(new UserItem { Id = 1, FirstName = "Test", LastName = "User", Username = "test", AccountBalance = 9000, GamesWon = 45, GamesLost = 15, Age = 1, Visibility = true });
                 _context.SaveChanges();
             }
         }
@@ -65,8 +68,13 @@ namespace serveris.Controllers
                 return NotFound();
             }
 
+            todo.FirstName = item.FirstName;
+            todo.LastName = item.LastName;
             todo.AccountBalance = item.AccountBalance;
-            todo.Name = item.Name;
+            todo.GamesWon = item.GamesWon;
+            todo.GamesLost = item.GamesLost;
+            todo.Age = item.Age;
+            todo.Visibility = item.Visibility;
 
             _context.UserItems.Update(todo);
             _context.SaveChanges();

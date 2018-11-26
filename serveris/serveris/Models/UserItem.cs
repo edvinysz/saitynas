@@ -7,10 +7,12 @@ namespace serveris.Models
 {
     public class UserItem
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public long Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public string Username { get; set; }
-        public string Password { get; set; }
+        public int Age { get; set; } // 0 = 0-18; 1 = 18-30; 2 = 30+
+        public bool Visibility { get; set; }
         public double AccountBalance { get; set; }
         public int GamesWon { get; set; }
         public int GamesLost { get; set; }
