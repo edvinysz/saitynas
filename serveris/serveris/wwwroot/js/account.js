@@ -45,7 +45,7 @@ function getData() {
             else
                 document.getElementById("visibility-main").checked = true;
                 */
-            alert(document.getElementById("visibility-main").checked);
+            //alert(document.getElementById("visibility-main").checked);
 
             document.getElementById("account-balance").innerHTML = user.accountBalance + "$";
             document.getElementById("games-won-a").innerHTML = user.gamesWon + " ";
@@ -89,16 +89,17 @@ function updateInformation() {
     findCurrentUserById();
 
     Id = document.cookie.replace(/(?:(?:^|.*;\s*)Id\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+    var str = document.getElementById("account-balance").textContent;
+    str = str.slice(0, -1);
 
     const item = {
         FirstName: $("#name").val(),
         LastName: $("#lastname").val(),
         Username: document.cookie.replace(/(?:(?:^|.*;\s*)Username\s*\=\s*([^;]*).*$)|^.*$/, "$1"),
-        AccountBalance: $("account-balance").val(),
-        GamesWon: $("games-won-a").val(),
-        GamesLost: $("games-lost-a").val(),
-        Age: ages,
-        Visibility: $("#visibility-main").val()
+        AccountBalance: str,
+        GamesWon: document.getElementById("games-won-a").textContent, //$("games-won-a").val(),
+        GamesLost: document.getElementById("games-lost-a").textContent, //$("games-lost-a").val(),
+        Age: ages
     };
 
     $.ajax({
