@@ -7,7 +7,7 @@ namespace serveris.Models
 {
     public class NewsItem
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public DateTime Date { get; set; }
         public string Title { get; set; }
         public string Text { get; set; }
