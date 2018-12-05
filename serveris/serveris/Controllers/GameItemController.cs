@@ -14,18 +14,24 @@ namespace serveris.Controllers
     [ApiController]
     public class GameItemController : ControllerBase
     {
-        private readonly GameItemContext _context;
+        public static BetItemContext _context;
         private IUserService userService;
 
-        public GameItemController(GameItemContext context)
+        public GameItemController(BetItemContext context)
         {
             _context = context;
 
             if (_context.GameItems.Count() == 0)
             {
-                _context.GameItems.Add(new GameItem { Winner = "first" });
+                _context.GameItems.Add(new GameItem { FirstTeamId = "Zalgiris", SecondTeamId = "Rytas", Firstkof = 1.5, Secondkof = 3.0, Winner = "", IsComplete = false });
+                _context.GameItems.Add(new GameItem { FirstTeamId = "Antanas", SecondTeamId = "Pranas", Firstkof = 1.8, Secondkof = 1.7, Winner = "1", IsComplete = false });
                 _context.SaveChanges();
             }
+        }
+
+        public static List<GameItem> test()
+        {
+            return _context.GameItems.ToList();
         }
 
         //GET

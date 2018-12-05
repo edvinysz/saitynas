@@ -15,9 +15,9 @@ namespace serveris.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly UserContext _context;
+        private readonly BetItemContext _context;
 
-        public UserController(UserContext context)
+        public UserController(BetItemContext context)
         {
             _context = context;
 

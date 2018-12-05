@@ -1,0 +1,64 @@
+﻿body {
+    font-family: 'Mukta', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.cards {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+    .cards li {
+        background-color: darkblue; /*#D4E4F7;*/
+        border: 1px solid #d0bfff;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+.inner {
+    text-align: center;
+}
+
+#grid-div.example {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+#grid-div h2 {
+    text-align: center;
+}
+
+.form-group.row {
+    margin-left: 0px;
+}
+
+#form1 .form-group.row {
+    width: 50%;
+}
+
+#bet1.form-control, #bet2.form-control {
+    width: 50%;
+}
+
+.btn-bet-1, .btn-bet-2 {
+    width: 43%!important;
+}
+
+#form1 {
+}
+
+#form2 {
+    text-align: right;
+    margin-left: 50%;
+    margin-top: -140px;
+}
+
+h6 {
+    font-size: 37px;
+    text-align: center;
+}

@@ -7,12 +7,12 @@ namespace serveris.Models
 {
     public class BetItem
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public int GameId { get; set; }
         public int PersonId { get; set; }
         public int ChosenId { get; set; }
         public double BetMoney { get; set; }
         public double PossibleWinMoney { get; set; }
-        public bool HasWon { get; set; }
+        public int HasWon { get; set; } // 0 - not started, 1 - win, 2 - loose
     }
 }

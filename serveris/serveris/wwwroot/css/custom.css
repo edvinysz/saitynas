@@ -68,3 +68,13 @@ footer {
     margin-top: 50px;
     width: 100%;
 }
+
+.modal-dialog {
+    margin-top: 10%;
+    border: 1px solid white;
+    padding: 10px;
+}
+
+.modal-dialog h1 {
+    color: white;
+}

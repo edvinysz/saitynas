@@ -13,6 +13,9 @@ namespace serveris.Models
 
         }
 
+        public DbSet<GameItem> GameItems { get; set; }
         public DbSet<BetItem> betItems { get; set; }
+        public DbSet<Winner> Winners { get; set; }
+        public DbSet<UserItem> UserItems { get; set; }
     }
 }

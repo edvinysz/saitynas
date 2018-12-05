@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace serveris.Models
 {
-    public class LuckyNumber
+    public class Winner
     {
         public long Id { get; set; }
-        public DateTime Date { get; set; }
-        public int Number { get; set; }
+        public long GameId { get; set; }
+        public string Win { get; set; }
     }
 }

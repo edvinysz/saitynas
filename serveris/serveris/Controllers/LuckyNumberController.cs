@@ -24,10 +24,14 @@ namespace serveris.Controllers
             if (_context.LuckyNumbers.Count() == 0)
             {
                 Random random = new Random();
-                int randomNumber = random.Next(0, 100);
 
                 //sukuriam nauja userItem jei empty, reiskia negalim istrint visu userItems
-                _context.LuckyNumbers.Add(new LuckyNumber { Number = randomNumber, Date = DateTime.Today });
+                _context.LuckyNumbers.Add(new LuckyNumber { Number = random.Next(1, 99), Date = DateTime.Today });
+                _context.LuckyNumbers.Add(new LuckyNumber { Number = random.Next(1, 99), Date = DateTime.Today });
+                _context.LuckyNumbers.Add(new LuckyNumber { Number = random.Next(1, 99), Date = DateTime.Today });
+                _context.LuckyNumbers.Add(new LuckyNumber { Number = random.Next(1, 99), Date = DateTime.Today });
+                _context.LuckyNumbers.Add(new LuckyNumber { Number = random.Next(1, 99), Date = DateTime.Today });
+                _context.LuckyNumbers.Add(new LuckyNumber { Number = random.Next(1, 99), Date = DateTime.Today });
                 _context.SaveChanges();
             }
         }
@@ -53,17 +57,15 @@ namespace serveris.Controllers
 
         //POST METODAS
         [HttpPost]
-        public IActionResult Create(LuckyNumber item) //input token and check if used
+        public IActionResult Create()
         {
-            /*var user = _userService.Authenticate(userParam.Username, userParam.Password);
+            Random rnd = new Random();
 
-            if (user == null)
-                return BadRequest(new { message = "Username or password is incorrect" });
-                */
+            LuckyNumber item = new LuckyNumber { Number = rnd.Next(1, 99), Date = DateTime.Today };
             _context.LuckyNumbers.Add(item);
             _context.SaveChanges();
 
-            return CreatedAtRoute("GetUser", new { id = item.Id }, item);
+            return CreatedAtRoute("GetNumber", new { id = item.Id }, item);
         }
 
         //DELETE METODAS

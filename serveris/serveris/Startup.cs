@@ -37,6 +37,7 @@ namespace serveris
             services.AddDbContext<BetItemContext>(opt => opt.UseInMemoryDatabase("Bet"));
             services.AddDbContext<GameItemContext>(opt => opt.UseInMemoryDatabase("Game"));
             services.AddDbContext<NewsItemContext>(opt => opt.UseInMemoryDatabase("News"));
+            services.AddDbContext<WinnerContext>(opt => opt.UseInMemoryDatabase("Win"));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             // configure strongly typed settings objects
