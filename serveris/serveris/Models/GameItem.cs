@@ -7,7 +7,7 @@ namespace serveris.Models
 {
     public class GameItem
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string FirstTeamId { get; set; }
         public string SecondTeamId { get; set; }
         public double Firstkof { get; set; }

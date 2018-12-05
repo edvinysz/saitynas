@@ -7,7 +7,7 @@ namespace serveris.Models
 {
     public class BetItem
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public int GameId { get; set; }
         public int PersonId { get; set; }
         public int ChosenId { get; set; }
